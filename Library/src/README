@@ -1,0 +1,31 @@
+The Server Side Contains the following Classes:
+```
+Server - This class is responsible for creating the Server Object and listening to the port and Multithreading.
+
+LibrarySetupService - This class is responsible for setting up the library and load the Users File.
+Book - This class is responsible for creating a Book Object.
+User - This class is responsible for creating a User Object, and contains most of the logic that users can do like chating
+with other users,accepting Borrow Requests, returning books, etc.
+Request - This class is responsible for creating a Request Object.
+```
+
+The Client Side Contains the following Classes:
+```
+Client - This class is responsible for creating the Client Object and connecting to the Server.
+
+
+
+```
+Some Of Logic Used in the Project:
+```
+1. The Server is Multithreaded, so it can handle multiple clients at the same time.
+2. We Used Files to store the Users Data, Books Data, Chats Data, and Requests Data.
+3. Each User has a File in Directory (src/Serverside/LibrarySetup/Books) with his name to store his Books.
+4. Every 2 Users have a File in Directory (src/Serverside/LibrarySetup/Chats) with (user1_user2.txt) name to store their Chat.
+5. The Chats File are Created when A Borrow Request is Accepted.
+6. All the Requests are stored in a File in Directory (src/Serverside/LibrarySetup/Requests)
+    with the name of the User who sent the Request.
+7. The Owner of the Book has the right to change the status of the Book to Available or Borrowed.
+8. BookTitle is Unique, so no 2 books can have the same title.
+9. All The Errors are Handled in the Project Like
+    If User Disconnects from the Server, the Server will Work Fine.
